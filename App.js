@@ -6,21 +6,19 @@
  * @flow
  */
 
-import React, { Component } from "react";
-import { StyleSheet, Text, View, TextInput } from "react-native";
+import React, { Component } from 'react';
+import { StyleSheet, Text, View, TextInput } from 'react-native';
 
 type Props = {};
 export default class App extends Component<Props> {
+  props: Props;
   render() {
     return (
       <View style={styles.wrapper}>
         <View style={styles.container}>
-          <Text>React</Text>
-          <TextInput
-            style={styles.textInput}
-            placeholder="Some long placeholder"
-          />
-          <Text>Native</Text>
+          <Text style={styles.surroundText}>React</Text>
+          <TextInput style={styles.textInput} placeholder="Some long placeholder" />
+          <Text style={styles.surroundText}>Native</Text>
         </View>
       </View>
     );
@@ -28,16 +26,20 @@ export default class App extends Component<Props> {
 }
 
 const styles = StyleSheet.create({
+  surroundText: {
+    color: 'blue',
+  },
   wrapper: {
     flex: 1,
-    justifyContent: "center"
+    justifyContent: 'center',
   },
   container: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center"
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   textInput: {
-    color: "red"
-  }
+    color: 'red',
+    padding: 0,
+  },
 });
