@@ -18,7 +18,7 @@ export default class App extends Component<Props> {
       <View style={styles.wrapper}>
         <View style={styles.container}>
           <Text style={styles.surroundText}>React</Text>
-          <TextInput style={styles.textInput} placeholder="Some long placeholder" value="S" />
+          <TextInput style={styles.textInput} placeholder="Some long placeholder" />
           <Text style={styles.surroundText}>Native</Text>
         </View>
       </View>
